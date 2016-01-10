@@ -150,19 +150,33 @@ hold off
 ylim1=-0.01; % limit plot 
 ylim2=0.01;
 for i=1:length(ayu)
-    axu(i,:)=axu(i,:)-[0 bxa*abs(grxu(i,2)) bya*abs(grxu(i,3)) bza*abs(grxu(i,4))];
-    axd(i,:)=axd(i,:)-[0 bxa*abs(grxd(i,2)) bya*abs(grxd(i,3)) bza*abs(grxd(i,4))];
-    ayu(i,:)=ayu(i,:)-[0 bxa*abs(gryu(i,2)) bya*abs(gryu(i,3)) bza*abs(gryu(i,4))];
-    ayd(i,:)=ayd(i,:)-[0 bxa*abs(gryd(i,2)) bya*abs(gryd(i,3)) bza*abs(gryd(i,4))];
-    azu(i,:)=azu(i,:)-[0 bxa*abs(grzu(i,2)) bya*abs(grzu(i,3)) bza*abs(grzu(i,4))];
-    azd(i,:)=azd(i,:)-[0 bxa*abs(grzd(i,2)) bya*abs(grzd(i,3)) bza*abs(grzd(i,4))];
-    
-    gxu(i,:)=gxu(i,:)-[0 bxg byg bzg];
-    gxd(i,:)=gxd(i,:)-[0 bxg byg bzg];
-    gyu(i,:)=gyu(i,:)-[0 bxg byg bzg];
-    gyd(i,:)=gyd(i,:)-[0 bxg byg bzg];
-    gzu(i,:)=gzu(i,:)-[0 bxg byg bzg];
-    gzd(i,:)=gzd(i,:)-[0 bxg byg bzg];
+%     axu(i,:)=axu(i,:)-[0 bxa*abs(grxu(i,2)) bya*abs(grxu(i,3)) bza*abs(grxu(i,4))];
+%     axd(i,:)=axd(i,:)-[0 bxa*abs(grxd(i,2)) bya*abs(grxd(i,3)) bza*abs(grxd(i,4))];
+%     ayu(i,:)=ayu(i,:)-[0 bxa*abs(gryu(i,2)) bya*abs(gryu(i,3)) bza*abs(gryu(i,4))];
+%     ayd(i,:)=ayd(i,:)-[0 bxa*abs(gryd(i,2)) bya*abs(gryd(i,3)) bza*abs(gryd(i,4))];
+%     azu(i,:)=azu(i,:)-[0 bxa*abs(grzu(i,2)) bya*abs(grzu(i,3)) bza*abs(grzu(i,4))];
+%     azd(i,:)=azd(i,:)-[0 bxa*abs(grzd(i,2)) bya*abs(grzd(i,3)) bza*abs(grzd(i,4))];
+
+    axu(i,:)=axu(i,:)-[0 bxa*Sxa*abs(grxu(i,2)) bya*Sya*abs(grxu(i,3)) bza*Sza*abs(grxu(i,4))];
+    axd(i,:)=axd(i,:)-[0 bxa*Sxa*abs(grxd(i,2)) bya*Sya*abs(grxd(i,3)) bza*Sza*abs(grxd(i,4))];
+    ayu(i,:)=ayu(i,:)-[0 bxa*Sxa*abs(gryu(i,2)) bya*Sya*abs(gryu(i,3)) bza*Sza*abs(gryu(i,4))];
+    ayd(i,:)=ayd(i,:)-[0 bxa*Sxa*abs(gryd(i,2)) bya*Sya*abs(gryd(i,3)) bza*Sza*abs(gryd(i,4))];
+    azu(i,:)=azu(i,:)-[0 bxa*Sxa*abs(grzu(i,2)) bya*Sya*abs(grzu(i,3)) bza*Sza*abs(grzu(i,4))];
+    azd(i,:)=azd(i,:)-[0 bxa*Sxa*abs(grzd(i,2)) bya*Sya*abs(grzd(i,3)) bza*Sza*abs(grzd(i,4))];
+
+%     gxu(i,:)=gxu(i,:)-[0 bxg byg bzg];
+%     gxd(i,:)=gxd(i,:)-[0 bxg byg bzg];
+%     gyu(i,:)=gyu(i,:)-[0 bxg byg bzg];
+%     gyd(i,:)=gyd(i,:)-[0 bxg byg bzg];
+%     gzu(i,:)=gzu(i,:)-[0 bxg byg bzg];
+%     gzd(i,:)=gzd(i,:)-[0 bxg byg bzg];
+
+    gxu(i,:)=gxu(i,:)-[0 bxg*Sxg byg*Syg bzg*Szg];
+    gxd(i,:)=gxd(i,:)-[0 bxg*Sxg byg*Syg bzg*Szg];
+    gyu(i,:)=gyu(i,:)-[0 bxg*Sxg byg*Syg bzg*Szg];
+    gyd(i,:)=gyd(i,:)-[0 bxg*Sxg byg*Syg bzg*Szg];
+    gzu(i,:)=gzu(i,:)-[0 bxg*Sxg byg*Syg bzg*Szg];
+    gzd(i,:)=gzd(i,:)-[0 bxg*Sxg byg*Syg bzg*Szg];
 end
 figure('Name', 'Sensors: 6Pos Ext Calibrated Data');
 %% Accelerometer Z Up
